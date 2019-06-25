@@ -1,5 +1,6 @@
 # Multiple-DS18B20-particle.io-photon
-A sketch to run multiple ds18b20 devices on OneWire particle.io Photon
+A sketch to run multiple ds18b20 devices on OneWire particle.io devices
+
 This sketch can be setup to run (1 to n) DS18B20 devices on a particle.io device. I used five. It is flexible in number of devices, sample times (90ms-whatever, or as fast as can be done), bit resolution (9-12bits), publishing max times, publishing min times (based on a defined temperature differential).
 
 It is fast and does not depend on any delay functions except those built into the OneWire protocol. If you have 10 devices hooked up, you could get about 80 temperature conversions/second in 9-bit mode. This program has some built-in monitoring of CRC failures, that were used to find the source of the CRC errors. But with the fixed OneWire.cpp file, there are no errors for the Photon.
